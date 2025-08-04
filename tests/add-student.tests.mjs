@@ -3,13 +3,13 @@ import fetch from 'node-fetch';
 
 suite('Add Students page', function() {
   test('Page title', async function() {
-    let res = await fetch("http://localhost:8888/add-student");
+    let res = await fetch("http://localhost:8080/add-student");
     let body = await res.text();
     assert.ok(body.includes("<h1>Register New Student</h1>"));
   });
 
   test('Students HTML form', async function() {
-    let res = await fetch("http://localhost:8888/add-student");
+    let res = await fetch("http://localhost:8080/add-student");
     let body = await res.text();
     
     let nameFieldFound = body.includes('<input id="name" type="text" name="name"/>');
@@ -54,7 +54,7 @@ suite('Add Students page', function() {
     let errMsg = body.includes("Cannot add student. Name and email fields are required!");
     assert.ok(errMsg, "Add invalid student should display an error message");
 
-    res = await fetch("http://localhost:8888/");
+    res = await fetch("http://localhost:8080/");
     body = await res.text();
 	assert.ok(body.includes("Registered students: <b>2</b>"), 
 		"Add invalid student should not change the students count");
