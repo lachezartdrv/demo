@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "MVC-app-integration-tests-example",
   "main": "index.js",
   "dependencies": {
@@ -8,7 +9,7 @@
     "node-fetch": "^3.3.2",
     "pug": "^3.0.3"
   },
- "scripts": {
-  "test": "mocha --loader node --spec 'tests/**/*.mjs'"
+"scripts": {
+  "test": "mocha --spec 'tests/**/*.mjs'"
 }
 }
