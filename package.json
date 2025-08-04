@@ -11,5 +11,6 @@
   },
 "scripts": {
   "test": "mocha --spec 'tests/**/*.mjs'"
+  "start": "node index.js"
 }
 }
