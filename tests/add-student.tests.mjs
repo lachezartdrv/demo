@@ -24,7 +24,7 @@ suite('Add Students page', function() {
 
   test('Add valid student', async function() {
     let res = await fetch(
-      "http://localhost:8888/add-student",
+      "http://localhost:8080/add-student",
       {
         method: 'POST',
         headers: {
@@ -41,7 +41,7 @@ suite('Add Students page', function() {
 
   test('Add invalid student', async function() {
      let res = await fetch(
-      "http://localhost:8888/add-student",
+      "http://localhost:8080/add-student",
       {
         method: 'POST',
         headers: {
