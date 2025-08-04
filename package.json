@@ -8,8 +8,7 @@
     "node-fetch": "^3.3.2",
     "pug": "^3.0.3"
   },
-  "scripts": {
-  "test": "mocha 'tests/*.mjs' --loader node",
-  "start": "node index.js"
+ "scripts": {
+  "test": "mocha --loader node --spec 'tests/**/*.mjs'"
 }
 }
