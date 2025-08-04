@@ -9,7 +9,7 @@ setup(async function () {
   const expressModule = await import('express');
   const httpModule = await import('http');
   const bodyParserModule = await import('body-parser');
-  const studentsController = await import('../controllers/students-controller.js');
+  const { setup } = await import('../controllers/students-controller.js');
 
   const express = expressModule.default;
   const app = express();
@@ -17,7 +17,7 @@ setup(async function () {
   app.set('view engine', 'pug');
   app.use(bodyParserModule.default.urlencoded({ extended: true }));
 
-  studentsController.setup(app, students);
+  setup(app, students);
   server = httpModule.createServer(app);
   server.listen(8888);
 });
