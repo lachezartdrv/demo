@@ -2,7 +2,11 @@ pipeline {
   agent any
 
   tools {
-    nodejs 'node-18'
+    'org.jenkinsci.plugins.nodejs.tools.NodeJSInstallation' 'node-18'
+  }
+
+  environment {
+    PATH = "${tool 'node-18'}/bin:${env.PATH}"
   }
 
   stages {
@@ -20,9 +24,8 @@ pipeline {
 
     stage('Start application') {
       steps {
-        sh 'node index.js &'
+        sh 'nohup node index.js > app.log 2>&1 &'
       }
     }
   }
-
 }
