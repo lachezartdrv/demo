@@ -19,7 +19,7 @@ setup(async function () {
 
   setup(app, students);
   server = httpModule.createServer(app);
-  server.listen(8888);
+  server.listen(8080);
 });
 
 teardown(async function () {
