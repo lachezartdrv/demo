@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   tools {
-    'org.jenkinsci.plugins.nodejs.tools.NodeJSInstallation' 'node-18'
+    'jenkins.plugins.nodejs.tools.NodeJSInstallation' 'node-18'
   }
 
   environment {
