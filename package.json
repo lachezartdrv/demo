@@ -10,7 +10,7 @@
     "pug": "^3.0.3"
   },
 "scripts": {
-  "test": "mocha --spec 'tests/**/*.mjs'"
+  "test": "mocha --spec 'tests/**/*.mjs'",
   "start": "node index.js"
 }
 }
